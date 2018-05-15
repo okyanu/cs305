@@ -1,8 +1,13 @@
+<?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 	    <meta charset="UTF-8">
 	    <title>Artworkio</title>
+	    <link rel="stylesheet" href="css/style.css">
 	    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -28,18 +33,34 @@ $(document).ready(function(){
 });
 </script>
 	</head>
-
+	<style>
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    text-align: center;
+}
+</style>
 	<body>
-				
-		<div class="all-box" align="center">
+		<nav>
+	  <ul>
+	    <li><a href="index.php">Home</a></li>
+	    <li><a href="logout.php">Logout</a></li>
+	  </ul>
+	</nav>	
+		<div class="center">
 				<form action="index2.php" method="post">
 		    	<input type="submit" name="someAction" value="Show All Arts" />
 				</form>
-		</div>	
-			<div class="search-box" align="center">
-	        <input type="text" autocomplete="off" placeholder="Search country..." />
+		</div>
+		<div class="center">	
+			<div class="search-box">
+	        <input type="text" autocomplete="off" placeholder="Search artist..." />
 	        <div class="result"></div>
-		</div>		
+		</div>	
+		</div>	
+			
 		
 		
 	</body>
